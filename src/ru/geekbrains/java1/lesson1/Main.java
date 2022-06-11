@@ -52,6 +52,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        isLeap(1612);
+        isLeap(1600);
     }
 }
