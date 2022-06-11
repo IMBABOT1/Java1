@@ -2,6 +2,10 @@ package ru.geekbrains.java1.lesson1;
 
 public class Main {
 
+    private static int calculate(int a, int b, int c, int d){
+        return a * (b + (c / d));
+    }
+
     private static void initialize(){
         byte b = 1;
         short s = 2;
