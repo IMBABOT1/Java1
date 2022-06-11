@@ -34,7 +34,7 @@ public class Main {
         return first + second >= 10 && first + second <= 20;
     }
 
-    private static int calculate(int a, int b, int c, int d){
+    private static float calculate(float a, float b, float c, float d){
         return a * (b + (c / d));
     }
 
