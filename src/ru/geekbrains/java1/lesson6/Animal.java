@@ -6,9 +6,6 @@ public abstract class Animal {
 
     private double jump;
 
-
-
-
     public Animal(int run, double jump){
         this.run = run;
         this.jump = jump;
@@ -23,5 +20,7 @@ public abstract class Animal {
         boolean bool = (jump >= height);
         System.out.println("Dog jump: " + bool + " " + jump);
     }
+
+    public abstract void swim(double distance);
 
 }

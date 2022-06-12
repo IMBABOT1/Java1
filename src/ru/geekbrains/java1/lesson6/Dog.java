@@ -9,7 +9,8 @@ public class Dog extends Animal {
         this.swim = swim;
     }
 
-    public void swim(float distance) {
+    @Override
+    public void swim(double distance) {
         boolean bool = (swim >= distance);
         System.out.println("swim: " + bool + " " + swim);
     }

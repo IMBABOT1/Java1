@@ -13,7 +13,7 @@ public class Main {
         dog.jump(0.1f);
         dog.swim(5);
 
-        cat.swim();
+        cat.swim(100);
         cat.run(100);
         cat.jump(1);
 

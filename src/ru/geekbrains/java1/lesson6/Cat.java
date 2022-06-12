@@ -4,9 +4,8 @@ public class Cat extends Animal {
     public Cat(int run, double jump) {
         super(run, jump);
     }
-
-
-    public void swim() {
+    @Override
+    public void swim(double distance) {
         System.out.println("cat can't swim");
     }
 }
