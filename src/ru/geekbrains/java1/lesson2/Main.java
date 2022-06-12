@@ -4,11 +4,29 @@ import java.util.Arrays;
 
 public class Main {
 
-    private static void shiftElements(int[] arr, int n){
-        for (int i = position-1; i >= 0; i--) {
-            array[i+1] = array[i];
+    private static int[] shiftElements(int[] arr, int n){
+        if (n >= 0) {
+            for (int i = 0; i < n; i++) {
+                int temp = arr[arr.length - 1];
+                for (int j = arr.length - 2; j > -1; j--) {
+                    arr[j + 1] = arr[j];
+                }
+                arr[0] = temp;
+            }
         }
+        if (n < 0){
+            n *=-1;
+            for (int i = 0; i < n; i++) {
+                int temp = arr[0];
+                for (int j = 0; j < arr.length -1; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                arr[arr.length - 1] = temp;
+            }
+        }
+        return arr;
     }
+
     private static boolean checkBalance(int[] arr){
         int sum = 0;
         boolean isBalance = false;
@@ -94,7 +112,8 @@ public class Main {
       //  System.out.println(findMin(new int[]{1, 5, 3, 2, 11, 4, -524, 5, 2, 4, 8, 9, 1, -152}));
       //  System.out.println(findMax(new int[]{1, 5, 3, 2, 11, 534, 4, -524, 5, 2, 4, 8, 9, 1, -152}));
 
-        shiftElements(new int[]{1, 5, 3, 2, 11, 534, 4, -524, 5, 2, 4, 8, 9, 1, -152}, 2);
+        System.out.println(Arrays.toString(shiftElements(new int[]{1, 5, 3, 2, 11, 534, 4, -524, 5, 2, 4, 8, 9, 1, -152}, -3)));
+
 
     }
 }
